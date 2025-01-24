@@ -18,7 +18,7 @@ export default function RootLayout({
         <ParticleBackground />
         <div className="relative z-10">
           <Navbar />
-          <main className="container mx-auto px-4">{children}</main>
+          <main className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">{children}</main>
         </div>
       </body>
     </html>
