@@ -33,8 +33,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="min-h-screen pt-16">
-      <h1 className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+    <div className="min-h-screen pt-16 px-4 sm:px-6 lg:px-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
         Projects
       </h1>
       <div className="grid gap-8">
@@ -44,19 +44,19 @@ export default function Projects() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-transparent-box p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+            className="bg-transparent-box p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
           >
-            <h2 className="text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
               {project.name}
             </h2>
-            <p className="text-gray-300 mb-4">{project.date}</p>
-            <p className="mb-4 text-gray-200">{project.description}</p>
-            <div className="flex space-x-4">
+            <p className="text-sm sm:text-base text-gray-300 mb-4">{project.date}</p>
+            <p className="text-sm sm:text-base mb-4 text-gray-200">{project.description}</p>
+            <div className="flex flex-wrap gap-4">
               <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-blue-400 hover:text-blue-300 transition duration-300"
+                className="flex items-center text-sm sm:text-base text-blue-400 hover:text-blue-300 transition duration-300"
               >
                 <FaGithub className="mr-2" />
                 GitHub
@@ -65,7 +65,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center text-blue-400 hover:text-blue-300 transition duration-300"
+                className="flex items-center text-sm sm:text-base text-blue-400 hover:text-blue-300 transition duration-300"
               >
                 <FaExternalLinkAlt className="mr-2" />
                 Live Demo

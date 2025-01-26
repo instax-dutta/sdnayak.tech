@@ -21,12 +21,12 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-center pt-16">
+    <div className="min-h-screen flex flex-col justify-center items-center text-center pt-16 px-4 sm:px-6 lg:px-8">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"
       >
         {typedName}
       </motion.h1>
@@ -34,7 +34,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-3xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500"
+        className="text-xl sm:text-2xl md:text-3xl mb-8 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500"
       >
         Full-Stack Developer
       </motion.h2>
@@ -50,7 +50,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-300 transition-colors duration-200"
         >
-          <FaGithub size={32} />
+          <FaGithub size={28} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/soumyadeep-nayak"
@@ -58,7 +58,7 @@ export default function Home() {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-300 transition-colors duration-200"
         >
-          <FaLinkedin size={32} />
+          <FaLinkedin size={28} />
         </Link>
         <Link
           href="https://sdnayak.tech"
@@ -66,14 +66,14 @@ export default function Home() {
           rel="noopener noreferrer"
           className="text-white hover:text-gray-300 transition-colors duration-200"
         >
-          <FaGlobe size={32} />
+          <FaGlobe size={28} />
         </Link>
       </motion.div>
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="max-w-2xl text-xl mb-8 text-gray-300"
+        className="max-w-2xl text-base sm:text-lg md:text-xl mb-8 text-gray-300"
       >
         Passionate about creating innovative web solutions using the MERN stack. Let's build something amazing together!
       </motion.p>

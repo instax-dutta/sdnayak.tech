@@ -31,8 +31,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="min-h-screen pt-16">
-      <h1 className="text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+    <div className="min-h-screen pt-16 px-4 sm:px-6 lg:px-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
         Professional Experience
       </h1>
       {experiences.map((exp, index) => (
@@ -41,16 +41,16 @@ export default function Experience() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
-          className="mb-8 bg-transparent-box p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+          className="mb-8 bg-transparent-box p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300"
         >
-          <h2 className="text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400">
             {exp.company}
           </h2>
-          <h3 className="text-xl mb-2 text-white">{exp.position}</h3>
-          <p className="text-gray-300 mb-4">
+          <h3 className="text-lg sm:text-xl mb-2 text-white">{exp.position}</h3>
+          <p className="text-sm sm:text-base text-gray-300 mb-4">
             {exp.duration} | {exp.location}
           </p>
-          <ul className="list-disc list-inside text-gray-200">
+          <ul className="list-disc list-inside text-sm sm:text-base text-gray-200">
             {exp.responsibilities.map((resp, idx) => (
               <li key={idx} className="mb-2">
                 {resp}

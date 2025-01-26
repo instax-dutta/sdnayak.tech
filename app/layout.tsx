@@ -1,11 +1,14 @@
-"use client";
-import "./globals.css";
-import { Inter } from "next/font/google";
-import { metadata } from "./layout.metadata";
-import Navbar from "./components/Navbar";
-import ParticleBackground from "./components/ParticlesBackground";
+import "./globals.css"
+import { Inter } from "next/font/google"
+import Navbar from "./components/Navbar"
+import ParticleBackground from "./components/ParticlesBackground"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "Soumyadeep Nayak - Developer Portfolio",
+  description: "Full-Stack Developer with expertise in MERN stack",
+}
 
 export default function RootLayout({
   children,
@@ -18,9 +21,10 @@ export default function RootLayout({
         <ParticleBackground />
         <div className="relative z-10">
           <Navbar />
-          <main className="container mx-auto px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-20 w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-6xl">{children}</main>
+          <main className="container mx-auto px-4 sm:px-6 lg:px-8">{children}</main>
         </div>
       </body>
     </html>
-  );
+  )
 }
+
